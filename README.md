@@ -8,6 +8,7 @@ This is the code repository for the paper "Improving Medical Question Summarizat
 | SimGate Reranker | Using SimGate Reranker as a second-stage model. |
 | LLM Reranker     | Using a large language model as a reranker.     |
 ## Requirements
+### BART/Sim Gate Reranker
 Python >= 3.8
 
 pytorch == 1.10.1
@@ -17,7 +18,14 @@ transformers == 4.26.1
 rouge==1.0.1
 
 py-rouge == 1.1
+### LLM Reranker
+Python >= 3.8
 
+pytorch == 2.0.1
+
+transformers == 4.42.2 (GLM4)
+
+transformers == 4.46.0 (Llama3.1/Qwen2.5)
 ## Dataset
 The datasets can be downloaded from the following URLs.
 
@@ -56,7 +64,6 @@ python ReRankingMain.py --dataset MeQSum --model_path reranking_model/MeQSum/you
 ### 5. Test LLM as Reranker
 
 ```shell
-python ChatGLMasReRanker.py --dataset MeQSum --num_cand 4
-python LLaMAasReRanker.py --dataset MeQSum --numcand 4 --model LLaMA-vicuna-7B/LLaMA-vicuna-13B
+python llm_reranker_main.py --dataset MeQSum --dataset_path dataset/MeQSum/test/test.json --cand_num 4 --model Meta-Llama-3.1-8B-Instruct --model_path models/Meta-Llama-3.1-8B-Instruct --example_num 3 --log_path log
 ```
 
