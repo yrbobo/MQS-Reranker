@@ -67,3 +67,17 @@ python ReRankingMain.py --dataset MeQSum --model_path reranking_model/MeQSum/you
 python llm_reranker_main.py --dataset MeQSum --dataset_path dataset/MeQSum/test/test.json --cand_num 4 --model Meta-Llama-3.1-8B-Instruct --model_path models/Meta-Llama-3.1-8B-Instruct --example_num 3 --log_path log
 ```
 
+## Acknowledgement
+
+If this work is useful in your research, please cite our paper.
+
+```
+@inproceedings{wei2025improving,
+  title={Improving Medical Question Summarization through Re-ranking},
+  author={Wei, Sibo and Peng, Xueping and Jiang, Yan and Li, Zhao and Liu, Yan and Wang, Zhiqiang and Lu, Wenpeng},
+  booktitle={Proceedings of the 2025 International Joint Conference on Neural Network (IJCNN 2025)},
+  pages={1--8},
+  year={2025}
+}
+```
+
